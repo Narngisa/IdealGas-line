@@ -18,6 +18,3 @@ python main.py
 ## Example Answer ✍️
 
 <img src="img/gas.png" width=550/>
-
-
-# © Narngisa - 2024
