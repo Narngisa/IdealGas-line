@@ -4,6 +4,9 @@
 
 This is a command-line tool that can calculate the ideal gas formula. 
 
+> [!IMPORTANT]
+> Version Program: 1.0
+
 > [!WARNING]
 > This script is currently under development.
 > If you encounter any bugs or errors, you can report them through a pull request.
