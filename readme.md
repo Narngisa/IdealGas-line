@@ -6,7 +6,7 @@ This is a command-line tool that can calculate the ideal gas formula.
 
 > [!IMPORTANT]
 > Project Version: 1.1\
-> [All Project Version](version.md)
+> [All Project Version](doc/version.md)
 
 > [!WARNING]
 > This script is currently under development.
