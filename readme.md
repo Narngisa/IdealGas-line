@@ -1,6 +1,6 @@
 # Ideal Gas Law command-line
 
-<img src="img/idealgas.jpg" />
+<img src="doc/img/idealgas.jpg" />
 
 This is a command-line tool that can calculate the ideal gas formula. 
 
@@ -20,4 +20,4 @@ python main.py
 
 ## Example Answer ✍️
 
-<img src="img/gas.png" width=550/>
+<img src="doc/img/gas.png" width=550/>
