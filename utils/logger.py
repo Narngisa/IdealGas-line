@@ -38,6 +38,15 @@ def clear_log():
 def ideal_standard():
     print("Function: PV = nRT")
 
+def return_log():
+    print(f"\n[y] Return")
+    rl = str(input(">> ").lower())
+
+    if rl == "y":
+        call(["Python", "main.py"])
+    else:
+        wb.open("https://youtu.be/xvFZjo5PgG0?si=6i6PR1wnUKkszPV7")
+
 def cal_p():
     print("Calculate: Pressure")
 

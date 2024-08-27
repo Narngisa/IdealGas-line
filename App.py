@@ -30,6 +30,9 @@ def app():
             else:
                 error_log("Error: No value in function !!")
                 back_log()
+
+            return_log()
+            
         elif result == 1 or result == 2:
             error_log("Error: Comimg soon !!")
             back_log()

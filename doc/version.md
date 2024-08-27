@@ -1,5 +1,9 @@
 # All Version Project
 
+### Version 1.2
+
+- Fixed program stopping after printing output in executable file
+
 ### Version 1.1
 
 - Fix bug function start GUI
