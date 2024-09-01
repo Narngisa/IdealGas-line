@@ -1,5 +1,6 @@
 from utils.logger import *
 from utils.STD_gas import *
+from utils.Mw_gas import *
 
 def app():
     clear_log()
@@ -18,14 +19,13 @@ def app():
             value = int(input("\n>> "))
 
             if value == 0:
-                equation_p()
-
+                STD_p()
             elif value == 1:
-                equation_v()
+                STD_v()
             elif value == 2:
-                equation_n()
+                STD_n()
             elif value == 3:
-                equation_t()
+                STD_t()
 
             else:
                 error_log("Error: No value in function !!")
@@ -33,7 +33,23 @@ def app():
 
             return_log()
             
-        elif result == 1 or result == 2:
+        elif result == 1:
+            clear_log()
+            art_ascii()
+            ideal_molecular()
+            print("What do you want to calculate?")
+            print("[0] P\n[1] V\n[2] g/Mw\n[3] T\n")
+
+            value = int(input("\n>> "))
+
+            if value == 0:
+                Mw_p()
+            elif value == 1:
+                Mw_v()
+            
+            return_log()
+
+        elif result == 2:
             error_log("Error: Comimg soon !!")
             back_log()
 

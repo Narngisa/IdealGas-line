@@ -38,6 +38,9 @@ def clear_log():
 def ideal_standard():
     print("Function: PV = nRT")
 
+def ideal_molecular():
+    print("Function: PV = g/MwRT")
+
 def return_log():
     print(f"\n[y] Return")
     rl = str(input(">> ").lower())
@@ -55,6 +58,12 @@ def cal_v():
 
 def cal_n():
     print("Calculate: mol")
+
+def cal_g():
+    print("Calculate: grams")
+
+def cal_mw():
+    print("Calculate: molecular mass")
 
 def cal_t():
     print("Calculate: Temperature")

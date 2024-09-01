@@ -2,12 +2,19 @@ from utils.logger import *
 
 r = 0.0821
 
-def equation_p():
+def STD_p():
 
     clear_log()
     art_ascii()
     ideal_standard()
     volume = float(input("V: "))
+
+    if volume == 0:
+        clear_log()
+        error_log("Error: Zero number cannot calculate !!")
+        back_log()
+    else:
+        pass
 
     clear_log()
     art_ascii()
@@ -56,12 +63,19 @@ def equation_p():
 
     print(f"V = {volume} L\nn = {mol} mol\nR = {r}\nT = {temperature} K\n\nP = {pressure:.2f} atm")
 
-def equation_v():
+def STD_v():
 
     clear_log()
     art_ascii()
     ideal_standard()
     pressure = float(input("P: "))
+
+    if pressure == 0:
+        clear_log()
+        error_log("Error: Zero number cannot calculate !!")
+        back_log()
+    else:
+        pass
 
     clear_log()
     art_ascii()
@@ -113,12 +127,19 @@ def equation_v():
 
     print(f"P = {pressure} atm\nn = {mol} mol\nR = {r}\nT = {temperature} K\n\nV = {volume:.2f} L")
 
-def equation_n():
+def STD_n():
     
     clear_log()
     art_ascii()
     ideal_standard()
     pressure = float(input("P: "))
+
+    if pressure == 0:
+        clear_log()
+        error_log("Error: Zero number cannot calculate !!")
+        back_log()
+    else:
+        pass
 
     clear_log()
     art_ascii()
@@ -185,12 +206,19 @@ def equation_n():
 
     print(f"P = {pressure} atm\nV = {volume} L\nR = {r}\nT = {temperature} K\n\nn = {mol:.2f} mol")
 
-def equation_t():
+def STD_t():
 
     clear_log()
     art_ascii()
     ideal_standard()
     pressure = float(input("P: "))
+
+    if pressure == 0:
+        clear_log()
+        error_log("Error: Zero number cannot calculate !!")
+        back_log()
+    else:
+        pass
 
     clear_log()
     art_ascii()

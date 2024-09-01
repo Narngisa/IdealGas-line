@@ -3,7 +3,8 @@
 ### Version 1.2
 
 - Fixed program stopping after printing output in executable file
-- Fixed program not returning to home page
+- Fixed the program not returning to the first page from the error_log function.
+- Fixed the function to use zero as a number for calculations.
 
 ### Version 1.1
 
