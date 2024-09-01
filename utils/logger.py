@@ -1,7 +1,7 @@
 import os
 import webbrowser as wb
-
-from subprocess import call
+import subprocess
+import sys
 
 ascii = """
 \033[31m  _____    _            _    _____             _                    
@@ -25,7 +25,7 @@ def back_log():
     er = str(input(">> ").lower())
 
     if er == "y":
-        call(["Python", "main.py"])
+        subprocess.run([sys.executable, "main.py"])
 
     elif er == "e":
         exit()
@@ -43,7 +43,7 @@ def return_log():
     rl = str(input(">> ").lower())
 
     if rl == "y":
-        call(["Python", "main.py"])
+        subprocess.run([sys.executable, "main.py"])
     else:
         wb.open("https://youtu.be/xvFZjo5PgG0?si=6i6PR1wnUKkszPV7")
 

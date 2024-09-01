@@ -3,6 +3,7 @@
 ### Version 1.2
 
 - Fixed program stopping after printing output in executable file
+- Fixed program not returning to home page
 
 ### Version 1.1
 
