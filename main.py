@@ -1,20 +1,29 @@
 from utils.logger import *
-from App import app
+from app import *
+from InquirerPy import prompt
 
-def main():
-    clear_log()
+def tool():
     art_ascii()
     print("\033[34mDeveloper By Narngisa\n\033[32mGithub: \033[35mhttps://github.com/Narngisalnw\033[37m")
-    print("\nStart ?? [y or n]\n")
 
-    start = str(input(">> "))
-    if start == "y":
-        app()
-    elif start == "n":
-        exit()
-    else:
-        error_log("Error: Are you kidding me?")
-        back_log()
+    options = {
+        "Yes": home,
+        "No": exit,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Will you start app?",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers = prompt(questions)
+
+    selected_function = options[answers['option']]
+    selected_function()
 
 if __name__ == "__main__":
-    main()
+    tool()

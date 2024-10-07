@@ -1,7 +1,5 @@
 import os
-import webbrowser as wb
-import subprocess
-import sys
+from InquirerPy import prompt
 
 ascii = """
 \033[31m  _____    _            _    _____             _                    
@@ -13,6 +11,7 @@ ascii = """
 """
 
 def art_ascii():
+    os.system("cls" if os.name == "nt" else "clear")
     print(ascii)
 
 def error_log(log_message: str) -> None:
@@ -20,50 +19,25 @@ def error_log(log_message: str) -> None:
     print(f'\033[91m{log_message}')
 
 def back_log():
-    print(f"[y] Return")
-    print(f"[e] Exit to app")
-    er = str(input(">> ").lower())
 
-    if er == "y":
-        subprocess.run([sys.executable, "main.py"])
+    def return_app():
+        os.system("python main.py")
 
-    elif er == "e":
-        exit()
-    else:
-        wb.open("https://youtu.be/xvFZjo5PgG0?si=6i6PR1wnUKkszPV7")
+    options = {
+        "Return": return_app,
+        "Exit": exit,
+    }
 
-def clear_log():
-    os.system("cls" if os.name == "nt" else "clear")
+    questions = [
+        {
+            "type": "list",
+            "message": "Return or Exit",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers = prompt(questions)
 
-def ideal_standard():
-    print("Function: PV = nRT")
-
-def ideal_molecular():
-    print("Function: PV = g/MwRT")
-
-def return_log():
-    print(f"\n[y] Return")
-    rl = str(input(">> ").lower())
-
-    if rl == "y":
-        subprocess.run([sys.executable, "main.py"])
-    else:
-        wb.open("https://youtu.be/xvFZjo5PgG0?si=6i6PR1wnUKkszPV7")
-
-def cal_p():
-    print("Calculate: Pressure")
-
-def cal_v():
-    print("Calculate: Volume")
-
-def cal_n():
-    print("Calculate: mol")
-
-def cal_g():
-    print("Calculate: grams")
-
-def cal_mw():
-    print("Calculate: molecular mass")
-
-def cal_t():
-    print("Calculate: Temperature")
+    selected_function = options[answers['option']]
+    selected_function()

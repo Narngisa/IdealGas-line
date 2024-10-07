@@ -1,10 +1,15 @@
 # All Version Project
 
+### Version 1.3
+
+- Function calculate PV = g/MwRT
+- New GUI Command-Line
+- Discontinued the use of the executable file
+
 ### Version 1.2
 
 - Fixed program stopping after printing output in executable file
 - Fixed the program not returning to the first page from the error_log function.
-- Fixed the function to use zero as a number for calculations.
 
 ### Version 1.1
 

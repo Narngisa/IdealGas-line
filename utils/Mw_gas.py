@@ -2,169 +2,383 @@ from utils.logger import *
 
 r = 0.0821
 
-def Mw_p():
-
-    clear_log()
+def mw_p():
     art_ascii()
-    ideal_molecular()
-    volume = float(input("V: "))
+    print("Function: PV = g/MwRT")
+    volume = float(input("Volume: "))
 
-    if volume == 0:
-        clear_log()
-        error_log("Error: Zero number cannot calculate !!")
-        back_log()
-    else:
-        pass
+    options_v = {
+        "Cubic Centimeter or Milliliter": 0,
+        "Cubic Decimeter or Liter": 1,
+    }
 
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    print("[0] cm^3\n[1] dm^3 or L")
-    unit_v = int(input("\n>> "))
+    questions_v = [
+        {
+            "type": "list",
+            "message": "Choose value of volume?",
+            "choices": list(options_v.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_v = prompt(questions_v)
 
-    if unit_v == 0:
+    value_v = options_v[answers_v['option']]
+
+    if value_v == 0:
         volume = volume / 1000
-    elif unit_v == 1:
+    elif value_v == 1:
         pass
-    else: 
-        error_log(f"Error: No value in function !!")
-        back_log()
 
-    clear_log()
     art_ascii()
-    ideal_molecular()
-    print("Input mass of gas")
-    grams = float(input("g: "))
+    print("Function: PV = g/MwRT")
+    grams = float(input("Grams: "))
 
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    print("[0] kg\n[1] g")
-    unit_g = int(input("\n>> "))
+    options_g = {
+        "Kilograms": 0,
+        "Grams": 1,
+    }
 
-    if unit_g == 0:
+    questions_g = [
+        {
+            "type": "list",
+            "message": "Choose value of grams?",
+            "choices": list(options_g.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_g = prompt(questions_g)
+
+    value_g = options_g[answers_g['option']]
+
+    if value_g == 0:
         grams = grams * 1000
-    elif unit_g == 1:
+    elif value_g == 1:
         pass
-    else: 
-        error_log(f"Error: No value in function !!")
-        back_log()
 
-    clear_log()
     art_ascii()
-    ideal_molecular()
-    print("Input molecular mass of gas")
-    molecular_mass = float(input("Mw: "))
+    print("Function: PV = g/MwRT")
 
-    clear_log()
+    molecular_weight = float(input("Molecular Weight: "))
+
     art_ascii()
-    ideal_molecular()
-    temperature = float(input("T: "))
+    print("Function: PV = g/MwRT")
+    temperature = float(input("Temperature: "))
 
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    print("[0] C\n[1] K")
-    unit_t = int(input("\n>> "))
+    options_t = {
+        "Celsius": 0,
+        "Kelvin": 1,
+    }
 
-    if unit_t == 0:
+    questions_t = [
+        {
+            "type": "list",
+            "message": "Choose value of temperature?",
+            "choices": list(options_t.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_t = prompt(questions_t)
+
+    value_t = options_t[answers_t['option']]
+
+    if value_t == 0:
         temperature = temperature + 273
-    elif unit_t == 1:
-        pass
-    else: 
-        error_log(f"Error: No value in function !!")
-        back_log()
-    
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    cal_p()
-
-    pressure = ((grams / molecular_mass)* r * temperature) / volume
-
-    print(f"V = {volume} L\ng/Mw = {grams}/{molecular_mass} \nR = {r}\nT = {temperature} K\n\nP = {pressure:.2f} atm")
-
-def Mw_v():
-
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    pressure = float(input("P: "))
-
-    if pressure == 0:
-        clear_log()
-        error_log("Error: Zero number cannot calculate !!")
-        back_log()
-    else:
+    elif value_t == 1:
         pass
 
-    clear_log()
     art_ascii()
-    ideal_molecular()
-    print("[0] mmHg or Torr\n[1] psi\n[2] atm")
-    
-    unit_p = int(input("\n>> "))
+    print("Function: PV = g/MwRT")
+    print("Calculate: Pressure")
 
-    if unit_p == 0:
+    pressure = ((grams / molecular_weight)* r * temperature) / volume
+
+    print(f"V = {volume} L\ng/Mw = {grams}/{molecular_weight} g/mol\nR = {r}\nT = {temperature} K\n\nP = {pressure:.2f} atm")
+
+def mw_v():
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    pressure = float(input("Pressure: "))
+
+    options_p = {
+        "mmHg or Torr": 0,
+        "psi": 1,
+        "atm": 2,
+    }
+
+    questions_p = [
+        {
+            "type": "list",
+            "message": "Choose value of pressure?",
+            "choices": list(options_p.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_p = prompt(questions_p)
+
+    value_p = options_p[answers_p['option']]
+
+    if value_p == 0:
         pressure = pressure / 760
-    elif unit_p == 1:
+    elif value_p == 1:
         pressure = pressure / 14.69
-    elif unit_p == 2:
+    elif value_p == 3:
         pass
-    else: 
-        error_log("Error: No value in function !!")
-        back_log()
 
-    clear_log()
     art_ascii()
-    ideal_molecular()
-    print("Input mass of gas")
-    grams = float(input("g: "))
+    print("Function: PV = g/MwRT")
+    grams = float(input("Grams: "))
 
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    print("[0] kg\n[1] g")
-    unit_g = int(input("\n>> "))
+    options_g = {
+        "Kilograms": 0,
+        "Grams": 1,
+    }
 
-    if unit_g == 0:
-        grams = grams * 1000
-    elif unit_g == 1:
-        pass
-    else: 
-        error_log(f"Error: No value in function !!")
-        back_log()
-
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    print("Input molecular mass of gas")
-    molecular_mass = float(input("Mw: "))
-
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    temperature = float(input("T: "))
-
-    clear_log()
-    art_ascii()
-    ideal_molecular()
-    print("[0] C\n[1] K")
-    unit_t = int(input("\n>> "))
-
-    if unit_t == 0:
-        temperature = temperature + 273
-    elif unit_t == 1:
-        pass
-    else: 
-        error_log(f"Error: No value in function !!")
-        back_log()
+    questions_g = [
+        {
+            "type": "list",
+            "message": "Choose value of grams?",
+            "choices": list(options_g.keys()),
+            "name": "option",
+        }
+    ]
     
-    clear_log()
+    answers_g = prompt(questions_g)
+
+    value_g = options_g[answers_g['option']]
+
+    if value_g == 0:
+        grams = grams * 1000
+    elif value_g == 1:
+        pass
+
     art_ascii()
-    ideal_molecular()
-    cal_p()
+    print("Function: PV = g/MwRT")
 
-    volume = ((grams / molecular_mass)* r * temperature) / pressure
+    molecular_weight = float(input("Molecular Weight: "))
 
-    print(f"P = {pressure} atm\ng/Mw = {grams}/{molecular_mass} \nR = {r}\nT = {temperature} K\n\nV = {volume:.2f} L")
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    temperature = float(input("Temperature: "))
+
+    options_t = {
+        "Celsius": 0,
+        "Kelvin": 1,
+    }
+
+    questions_t = [
+        {
+            "type": "list",
+            "message": "Choose value of temperature?",
+            "choices": list(options_t.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_t = prompt(questions_t)
+
+    value_t = options_t[answers_t['option']]
+
+    if value_t == 0:
+        temperature = temperature + 273
+    elif value_t == 1:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    print("Calculate: Volume")
+
+    volume = ((grams / molecular_weight) * r * temperature) / pressure
+
+    print(f"P = {pressure} atm\ng/Mw = {grams}/{molecular_weight} g/mol\nR = {r}\nT = {temperature} K\n\nV = {volume:.2f} L")
+
+def mw_mw():
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    pressure = float(input("Pressure: "))
+
+    options_p = {
+        "mmHg or Torr": 0,
+        "psi": 1,
+        "atm": 2,
+    }
+
+    questions_p = [
+        {
+            "type": "list",
+            "message": "Choose value of pressure?",
+            "choices": list(options_p.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_p = prompt(questions_p)
+
+    value_p = options_p[answers_p['option']]
+
+    if value_p == 0:
+        pressure = pressure / 760
+    elif value_p == 1:
+        pressure = pressure / 14.69
+    elif value_p == 3:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    volume = float(input("Volume: "))
+
+    options_v = {
+        "Cubic Centimeter or Milliliter": 0,
+        "Cubic Decimeter or Liter": 1,
+    }
+
+    questions_v = [
+        {
+            "type": "list",
+            "message": "Choose value of volume?",
+            "choices": list(options_v.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_v = prompt(questions_v)
+
+    value_v = options_v[answers_v['option']]
+
+    if value_v == 0:
+        volume = volume / 1000
+    elif value_v == 1:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    temperature = float(input("Temperature: "))
+
+    options_t = {
+        "Celsius": 0,
+        "Kelvin": 1,
+    }
+
+    questions_t = [
+        {
+            "type": "list",
+            "message": "Choose value of temperature?",
+            "choices": list(options_t.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_t = prompt(questions_t)
+
+    value_t = options_t[answers_t['option']]
+
+    if value_t == 0:
+        temperature = temperature + 273
+    elif value_t == 1:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    print("Calculate: Volume")
+
+    grams_of_molecular_weight = (pressure * volume) / (r * temperature)
+
+    print(f"P = {pressure} atm\nV = {volume:.2f} L \nR = {r}\nT = {temperature} K\n\ng/Mw = {grams_of_molecular_weight} g/mol")
+
+def mw_t():
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    pressure = float(input("Pressure: "))
+
+    options_p = {
+        "mmHg or Torr": 0,
+        "psi": 1,
+        "atm": 2,
+    }
+
+    questions_p = [
+        {
+            "type": "list",
+            "message": "Choose value of pressure?",
+            "choices": list(options_p.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_p = prompt(questions_p)
+
+    value_p = options_p[answers_p['option']]
+
+    if value_p == 0:
+        pressure = pressure / 760
+    elif value_p == 1:
+        pressure = pressure / 14.69
+    elif value_p == 3:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    volume = float(input("Volume: "))
+
+    options_v = {
+        "Cubic Centimeter or Milliliter": 0,
+        "Cubic Decimeter or Liter": 1,
+    }
+
+    questions_v = [
+        {
+            "type": "list",
+            "message": "Choose value of volume?",
+            "choices": list(options_v.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_v = prompt(questions_v)
+
+    value_v = options_v[answers_v['option']]
+
+    if value_v == 0:
+        volume = volume / 1000
+    elif value_v == 1:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+    grams = float(input("Grams: "))
+
+    options_g = {
+        "Kilograms": 0,
+        "Grams": 1,
+    }
+
+    questions_g = [
+        {
+            "type": "list",
+            "message": "Choose value of grams?",
+            "choices": list(options_g.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers_g = prompt(questions_g)
+
+    value_g = options_g[answers_g['option']]
+
+    if value_g == 0:
+        grams = grams * 1000
+    elif value_g == 1:
+        pass
+
+    art_ascii()
+    print("Function: PV = g/MwRT")
+
+    molecular_weight = float(input("Molecular Weight: "))
+
+    temperature = (pressure * volume) / ((grams / molecular_weight) * r)
+    temperature_C = temperature - 273
+
+    print(f"P = {pressure} atm\nV = {volume:.2f} L \nR = {r}\ng/Mw = {grams}/{molecular_weight} g/mol\n\nT = {temperature:.2f} K\nT = {temperature_C:.1f} C")

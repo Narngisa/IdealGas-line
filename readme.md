@@ -2,23 +2,14 @@
 
 <img src="doc/img/idealgas.jpg" />
 
-This is a command-line tool that can calculate the ideal gas formula. 
+This is a command-line tool that can calculate the ideal gas formula.
 
 > [!IMPORTANT]
-> Project Version: 1.2\
-> [All Project Version](doc/version.md)
+> Project Version: 1.3
+>
+> - [All Project Version](doc/version.md)
+> - [How To Use](doc/run.md)
 
 > [!WARNING]
 > This script is currently under development.
 > If you encounter any bugs or errors, you can report them through a pull request.
-
-## How to run ?? 💻
-```python
-python main.py
-```
-> [!NOTE]
-> Python version 3.9 or higher
-
-## Example Answer ✍️
-
-<img src="doc/img/gas.png" width=550/>

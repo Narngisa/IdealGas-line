@@ -1,61 +1,94 @@
 from utils.logger import *
-from utils.STD_gas import *
-from utils.Mw_gas import *
+from utils.std_gas import *
+from utils.mw_gas import *
 
-def app():
-    clear_log()
+from InquirerPy import prompt
+
+def home():
     art_ascii()
-    print("Choose a function to calculate.\n[0] PV = nRT\n[1] PV = g/MwRT\n[2] PM = DRT")
 
-    try:
-        result = int(input("\n>> "))
-        if result == 0:
-            clear_log()
-            art_ascii()
-            ideal_standard()
-            print("What do you want to calculate?")
-            print("[0] P\n[1] V\n[2] N\n[3] T\n")
+    options = {
+        "PV = nRT": 0,
+        "PV = g/MwRT": 1,
+        "PM = DRT": back_log,
+    }
 
-            value = int(input("\n>> "))
+    questions = [
+        {
+            "type": "list",
+            "message": "Choose a function to calculate. ",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    func_cal = prompt(questions)
 
-            if value == 0:
-                STD_p()
-            elif value == 1:
-                STD_v()
-            elif value == 2:
-                STD_n()
-            elif value == 3:
-                STD_t()
+    choice = options[func_cal['option']]
+    
+    if choice == 0:
+        art_ascii()
 
-            else:
-                error_log("Error: No value in function !!")
-                back_log()
+        options = {
+            "Pressure": 0,
+            "Volume": 1,
+            "Mol": 2,
+            "Temperature": 3,
+        }
 
-            return_log()
-            
-        elif result == 1:
-            clear_log()
-            art_ascii()
-            ideal_molecular()
-            print("What do you want to calculate?")
-            print("[0] P\n[1] V\n[2] g/Mw\n[3] T\n")
+        questions = [
+            {
+                "type": "list",
+                "message": "Choose a function to calculate. ",
+                "choices": list(options.keys()),
+                "name": "option",
+            }
+        ]
+        
+        choice_cal = prompt(questions)
 
-            value = int(input("\n>> "))
+        calculate = options[choice_cal['option']]
 
-            if value == 0:
-                Mw_p()
-            elif value == 1:
-                Mw_v()
-            
-            return_log()
+        if calculate == 0:
+            std_p()
+        elif calculate == 1:
+            std_v()
+        elif calculate == 2:
+            std_n()
+        elif calculate == 3:
+            std_t()
+    
+    elif choice == 1:
+        art_ascii()
 
-        elif result == 2:
-            error_log("Error: Comimg soon !!")
-            back_log()
+        options = {
+            "Pressure": 0,
+            "Volume": 1,
+            "Grams / Molecular Weight": 2,
+            "Temperature": 3,
+        }
 
-        else:
-            error_log("Error: No function !!")
-            back_log()
-    except:
-        error_log("Value not type int !!")
-        back_log()
+        questions = [
+            {
+                "type": "list",
+                "message": "Choose a function to calculate. ",
+                "choices": list(options.keys()),
+                "name": "option",
+            }
+        ]
+        
+        choice_cal = prompt(questions)
+
+        calculate = options[choice_cal['option']]
+
+        if calculate == 0:
+            mw_p()
+        elif calculate == 1:
+            mw_v()
+        elif calculate == 2:
+            mw_mw()
+        elif calculate == 3:
+            mw_t()
+
+    print("\n")
+    back_log()
