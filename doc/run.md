@@ -8,16 +8,18 @@
 > Python version 3.9 or higher
 
 ```
-pip install -r requirements.txt -y
+pip install -r requirements.txt
 ```
 
+- Visual Studio Code or Others program
 ```python
 python main.py
 ```
 
-### OR
-
 - Command Prompt
+```
+cd idealgas-line
+```
 ```
 .\env\Scripts\activate
 ```
@@ -26,6 +28,9 @@ python main.py
 ```
 
 - PowerShell
+```
+cd idealgas-line
+```
 ```
 env\Scripts\activate
 ```

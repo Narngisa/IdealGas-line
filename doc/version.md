@@ -1,8 +1,13 @@
 # All Version Project
 
+### Version 1.4
+
+- New Function calculate PMw = DRT
+- Changed all code structure for easy to read
+
 ### Version 1.3
 
-- Function calculate PV = g/MwRT
+- New Function calculate PV = g/MwRT
 - New GUI Command-Line
 - Discontinued the use of the executable file
 
@@ -18,4 +23,4 @@
 
 ### Version 1.0
 
-- Function calculate PV = nRT
+- New Function calculate PV = nRT

@@ -1,53 +1,14 @@
 from utils.logger import *
 from utils.std_gas import *
 from utils.mw_gas import *
-
-from InquirerPy import prompt
+from utils.dst_gas import *
 
 def home():
-    art_ascii()
 
-    options = {
-        "PV = nRT": 0,
-        "PV = g/MwRT": 1,
-        "PM = DRT": back_log,
-    }
-
-    questions = [
-        {
-            "type": "list",
-            "message": "Choose a function to calculate. ",
-            "choices": list(options.keys()),
-            "name": "option",
-        }
-    ]
-    
-    func_cal = prompt(questions)
-
-    choice = options[func_cal['option']]
+    choice = choice_func()
     
     if choice == 0:
-        art_ascii()
-
-        options = {
-            "Pressure": 0,
-            "Volume": 1,
-            "Mol": 2,
-            "Temperature": 3,
-        }
-
-        questions = [
-            {
-                "type": "list",
-                "message": "Choose a function to calculate. ",
-                "choices": list(options.keys()),
-                "name": "option",
-            }
-        ]
-        
-        choice_cal = prompt(questions)
-
-        calculate = options[choice_cal['option']]
+        calculate = calculate_std()
 
         if calculate == 0:
             std_p()
@@ -59,27 +20,7 @@ def home():
             std_t()
     
     elif choice == 1:
-        art_ascii()
-
-        options = {
-            "Pressure": 0,
-            "Volume": 1,
-            "Grams / Molecular Weight": 2,
-            "Temperature": 3,
-        }
-
-        questions = [
-            {
-                "type": "list",
-                "message": "Choose a function to calculate. ",
-                "choices": list(options.keys()),
-                "name": "option",
-            }
-        ]
-        
-        choice_cal = prompt(questions)
-
-        calculate = options[choice_cal['option']]
+        calculate = calculate_mw()
 
         if calculate == 0:
             mw_p()
@@ -89,6 +30,18 @@ def home():
             mw_mw()
         elif calculate == 3:
             mw_t()
+
+    elif choice == 2:
+        calculate = calculate_d()
+
+        if calculate == 0:
+            dst_p()
+        elif calculate == 1:
+            dst_mw()
+        elif calculate == 2:
+            dst_d()
+        elif calculate == 3:
+            dst_t()
 
     print("\n")
     back_log()

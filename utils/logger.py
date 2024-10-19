@@ -41,3 +41,127 @@ def back_log():
 
     selected_function = options[answers['option']]
     selected_function()
+
+def home_log():
+    art_ascii()
+    print("\033[34mDeveloper By Narngisa\n\033[32mGithub: \033[35mhttps://github.com/Narngisalnw\033[37m")
+
+    options = {
+        "Yes": "home",
+        "No": exit,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Will you start app?",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    answers = prompt(questions)
+
+    selected_function = options[answers['option']]
+
+    return selected_function
+
+def choice_func():
+    art_ascii()
+
+    options = {
+        "PV = nRT": 0,
+        "PV = g/MwRT": 1,
+        "PMw = DRT": 2,
+        "P = MRT": back_log,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Choose a function to calculate. ",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    func_cal = prompt(questions)
+
+    choice = options[func_cal['option']]
+
+    return choice
+
+def calculate_std():
+    art_ascii()
+
+    options = {
+        "Pressure": 0,
+        "Volume": 1,
+        "Mol": 2,
+        "Temperature": 3,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Choose a function to calculate. ",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    choice_cal = prompt(questions)
+
+    calculate = options[choice_cal['option']]
+    
+    return calculate
+
+def calculate_mw():
+    art_ascii()
+
+    options = {
+        "Pressure": 0,
+        "Volume": 1,
+        "Grams / Molecular Weight": 2,
+        "Temperature": 3,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Choose a function to calculate. ",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    choice_cal = prompt(questions)
+
+    calculate = options[choice_cal['option']]
+
+    return calculate
+
+def calculate_d():
+    art_ascii()
+
+    options = {
+        "Pressure": 0,
+        "Molecular Weight": 1,
+        "Density": 2,
+        "Temperature": 3,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Choose a function to calculate. ",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    choice_cal = prompt(questions)
+
+    calculate = options[choice_cal['option']]
+
+    return calculate
