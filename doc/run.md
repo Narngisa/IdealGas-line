@@ -2,21 +2,30 @@
 
 <img src="../doc/img/idealgas.jpg" />
 
-## How to run ?? 💻
+## ❓How to run❓
 
 > [!NOTE]
 > Python version 3.9 or higher
 
+- Git 👇
+```
+git clone https://github.com/Narngisalnw/IdealGas-line.git
+```
+#
+
+- Library Python 🔰
 ```
 pip install -r requirements.txt
 ```
 
-- Visual Studio Code or Others program
+- Visual Studio Code or Others program 💻
 ```python
 python main.py
 ```
 
-- Command Prompt
+#
+
+- Command Prompt 📗
 ```
 cd idealgas-line
 ```
@@ -27,7 +36,7 @@ cd idealgas-line
 python main.py
 ```
 
-- PowerShell
+- PowerShell 📘
 ```
 cd idealgas-line
 ```

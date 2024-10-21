@@ -45,4 +45,4 @@ def mw_t():
     temperature = (pressure * volume) / ((grams / molecular_weight) * r)
     temperature_C = temperature - 273
 
-    print(f"P = {pressure} atm\nV = {volume:.2f} L \nR = {r}\ng/Mw = {grams}/{molecular_weight} g/mol\n\nT = {temperature:.2f} K\nT = {temperature_C:.1f} C")
+    print(f"P = {pressure} atm\nV = {volume:.2f} L \nR = {r}\ng/Mw = {grams}/{molecular_weight} g/mol\n\nT = {temperature:.2f} K\nT = {temperature_C:.2f} C")

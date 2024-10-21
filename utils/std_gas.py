@@ -43,4 +43,4 @@ def std_t():
     temperature = (pressure * volume) / (mol * r)
     temperature_C = temperature - 273
 
-    print(f"P = {pressure} atm\nV = {volume} L\nR = {r}\nn = {mol} mol\n\nT = {temperature:.2f} K\nT = {temperature_C:.1f} C")
+    print(f"P = {pressure} atm\nV = {volume} L\nR = {r}\nn = {mol} mol\n\nT = {temperature:.2f} K\nT = {temperature_C:.2f} C")

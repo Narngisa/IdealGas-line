@@ -73,7 +73,7 @@ def choice_func():
         "PV = nRT": 0,
         "PV = g/MwRT": 1,
         "PMw = DRT": 2,
-        "P = MRT": back_log,
+        "P = MRT": 3,
     }
 
     questions = [
@@ -149,6 +149,30 @@ def calculate_d():
         "Molecular Weight": 1,
         "Density": 2,
         "Temperature": 3,
+    }
+
+    questions = [
+        {
+            "type": "list",
+            "message": "Choose a function to calculate. ",
+            "choices": list(options.keys()),
+            "name": "option",
+        }
+    ]
+    
+    choice_cal = prompt(questions)
+
+    calculate = options[choice_cal['option']]
+
+    return calculate
+
+def calculate_mo():
+    art_ascii()
+
+    options = {
+        "Pressure": 0,
+        "Molar": 1,
+        "Temperature": 2,
     }
 
     questions = [

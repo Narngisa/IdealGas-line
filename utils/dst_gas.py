@@ -38,5 +38,5 @@ def dst_t():
 
     temperature = (pressure * molecular_weight) / (r * density)
     temperature_C = temperature - 273
-    print(f"P = {pressure:.2f} atm\nMw = {molecular_weight} mol\nR = {r}\nD = {density} g/L\n\nT = {temperature:.2f} K\nT = {temperature_C:.1f} C")
+    print(f"P = {pressure:.2f} atm\nMw = {molecular_weight} mol\nR = {r}\nD = {density} g/L\n\nT = {temperature:.2f} K\nT = {temperature_C:.2f} C")
 

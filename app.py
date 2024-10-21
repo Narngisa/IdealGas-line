@@ -2,6 +2,7 @@ from utils.logger import *
 from utils.std_gas import *
 from utils.mw_gas import *
 from utils.dst_gas import *
+from utils.mo_gas import *
 
 def home():
 
@@ -42,6 +43,16 @@ def home():
             dst_d()
         elif calculate == 3:
             dst_t()
+
+    elif choice == 3:
+        calculate = calculate_mo()
+
+        if calculate == 0:
+            mo_p()
+        elif calculate == 1:
+            mo_m()
+        elif calculate == 2:
+            mo_t()
 
     print("\n")
     back_log()

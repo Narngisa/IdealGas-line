@@ -144,3 +144,10 @@ def density_cal(message: str) -> None:
     density = float(input("Density: "))
 
     return density
+
+def molar_cal(message: str) -> None:
+    art_ascii()
+    print(f"Function: {message}")
+    molar = float(input("Molar: "))
+
+    return molar

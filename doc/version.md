@@ -1,5 +1,9 @@
 # All Version Project
 
+### Version 1.5 (Lastest)
+- New Function calculate P = MRT
+- Changed all readme for easy to read
+
 ### Version 1.4
 
 - New Function calculate PMw = DRT
