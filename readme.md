@@ -11,8 +11,9 @@ This is a command-line tool that can calculate the ideal gas formula, including 
 > - [How To Use](doc/run.md)
 
 > [!NOTE]
-> This script will stop being developed after version 1.5. 
+> This script will stop being developed after version 1.5
 > If you find any bugs, you can fork and modify it yourself.
+> When I have free time, I might come back to make some minor updates. (maybe)
 
 
 ## By Narngisa

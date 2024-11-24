@@ -1,6 +1,11 @@
 # All Version Project
 
-### Version 1.5 (Lastest)
+### Version 1.5.1 (Lastest)
+- Discontinued the use of the environment file
+- Add bat file to run code
+- Changed run readme file
+
+### Version 1.5
 - New Function calculate P = MRT
 - Changed all readme for easy to read
 

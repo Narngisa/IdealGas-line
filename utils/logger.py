@@ -44,7 +44,7 @@ def back_log():
 
 def home_log():
     art_ascii()
-    print("\033[34mDeveloper By Narngisa\n\033[32mGithub: \033[35mhttps://github.com/Narngisalnw\033[37m")
+    print("\033[34mDeveloper By Narngisa\n\033[32mGithub: \033[35mhttps://github.com/Narngisa\033[37m")
 
     options = {
         "Yes": "home",

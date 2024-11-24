@@ -2,47 +2,14 @@
 
 <img src="../doc/img/idealgas.jpg" />
 
-## ❓How to run❓
+#
 
 > [!NOTE]
 > Python version 3.9 or higher
 
-- Git 👇
-```
-git clone https://github.com/Narngisalnw/IdealGas-line.git
-```
-#
+## Getting Started 📗
 
-- Library Python 🔰
-```
-pip install -r requirements.txt
-```
-
-- Visual Studio Code or Others program 💻
-```python
-python main.py
-```
-
-#
-
-- Command Prompt 📗
-```
-cd idealgas-line
-```
-```
-.\env\Scripts\activate
-```
-```
-python main.py
-```
-
-- PowerShell 📘
-```
-cd idealgas-line
-```
-```
-env\Scripts\activate
-```
-```
-python main.py
-```
+1. Clone this project.
+2. Execute [prepare.bat](prepare.bat) or or copy content to your console.
+3. Execute [run.bat](run.bat) to open a console or run on your program editor.
+4. Good Luck!
