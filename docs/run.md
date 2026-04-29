@@ -1,6 +1,6 @@
 # Ideal Gas Law command-line
 
-<img src="../doc/img/idealgas.jpg" />
+<img src="../docs/img/idealgas.jpg" />
 
 #
 
