@@ -7,4 +7,4 @@ This is a command-line tool that can calculate the ideal gas formula, including 
 > [!IMPORTANT]
 > Project Version: 1.0.0
 >
-> - [How To Use](doc/run.md)
+> - [How To Use](docs/run.md)
